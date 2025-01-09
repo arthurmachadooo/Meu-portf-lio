@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meus Projetos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+
+        #projetos {
+            background-color: #222;
+            color: white;
+            padding: 40px;
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto 40px; /* Adiciona margem superior para evitar sobreposição com a barra de navegação */
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border: 3px solid #ff6f61;
+        }
+
+        #projetos h2 {
+            font-size: 30px;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .projeto-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ff6f61;
+        }
+
+        .projeto-item h3 {
+            font-size: 24px;
+            color: #ff6f61;
+        }
+
+        .projeto-item p {
+            font-size: 16px;
+            color: #f0f0f0;
+            margin-top: 10px;
+        }
+
+        .imagem-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .imagem-container a {
+            width: 48%;
+            height: 200px;
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .imagem-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .imagem-container img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                padding: 8px 0;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 3px;
+            }
+
+            #projetos {
+                padding: 30px;
+                width: 95%;
+                margin-top: 120px; 
+            }
+
+            #projetos h2 {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+
+            .projeto-item h3 {
+                font-size: 20px;
+            }
+
+            .projeto-item p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Sobre Mim</a>
+        <a href="experiencia.html">Experiência</a>  
+        <a href="curriculo.html">Currículo</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    
+    <div id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projeto-item">
+            <h3>Projeto 1 - Jogo Da Velha</h3>
+            <p>O Jogo da Velha é um clássico jogo de tabuleiro onde dois jogadores alternam turnos para colocar seus símbolos ("X" ou "O") em um grid 3x3, com o objetivo de formar uma linha de três símbolos consecutivos. Caso o tabuleiro se encha sem que alguém vença, o jogo termina em empate. No projeto de Jogo da Velha 2.0, os professores pediram que desenvolvêssemos uma versão digital do jogo com um timer para cada rodada, exigindo que os jogadores tomassem decisões rápidas. Essa versão não só aprimorou o clássico, mas também nos desafiou a aplicar conceitos de programação, controle de tempo e design de interfaces, enquanto trabalhávamos em equipe para criar uma experiência mais dinâmica e interativa.</p>
+            
+            <div class="imagem-container">
+                <a href="https://arthurmachadooo.github.io/jogo-final/INTRO.HTML" target="_blank">
+                    <img src="IMAGENS/jogo da velha.png" alt="Imagem do Projeto 1 - Parte 1">
+                </a>
+                <a href="https://arthurmachadooo.github.io/jogo-final/REGRAS.HTML" target="_blank">
+                    <img src="IMAGENS/regras.png" alt="Imagem do Projeto 1 - Parte 2">
+                </a>
+                <a href="https://arthurmachadooo.github.io/jogo-final/CREDITOS.HTML" target="_blank">
+                    <img src="IMAGENS/Créditos.png" alt="Imagem do Projeto 1 - Parte 3">
+                </a>
+                <a href="https://arthurmachadooo.github.io/jogo-final/index.html" target="_blank">
+                    <img src="IMAGENS/jogo da velha 2.png" alt="Imagem do Projeto 1 - Parte 4">
+                </a>
+            </div>
+        </div>
+  
+        <div class="projeto-item">
+            <h3>Projeto 2 - Site De Presentes</h3>
+            <p>O Projeto do Site de Presentes de Natal foi uma ideia criativa para surpreender minha namorada. Em vez de entregar os presentes de forma tradicional, criei um site onde ela tinha que completar pequenos desafios para descobrir o que havia ganhado. Cada desafio revelava um presente, tornando o momento mais interativo e divertido. Esse projeto me permitiu aplicar conceitos de design web e interatividade, criando uma experiência única e personalizada.</p>
+            
+            <div class="imagem-container">
+                <a href="https://arthurmachadooo.github.io/presentes-pra-bruna/" target="_blank">
+                    <img src="IMAGENS/projeto2.png" alt="Imagem do Projeto 2 - Parte 1">
+                </a>
+                <a href="https://arthurmachadooo.github.io/presentes-pra-bruna/" target="_blank">
+                    <img src="IMAGENS/projeto 22.png" alt="Imagem do Projeto 2 - Parte 2">
+                </a>
+                <a href="https://arthurmachadooo.github.io/presentes-pra-bruna/" target="_blank">
+                    <img src="IMAGENS/projeto 222.png" alt="Imagem do Projeto 2 - Parte 3">
+                </a>
+                <a href="https://arthurmachadooo.github.io/presentes-pra-bruna/" target="_blank">
+                    <img src="IMAGENS/projeto 2222.png" alt="Imagem do Projeto 2 - Parte 4">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

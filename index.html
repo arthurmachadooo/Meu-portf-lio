@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cabeçalho e Navegação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Coloca o conteúdo da header na horizontal */
+            height: 350px;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid #ff6f61;
+            padding: 20px;
+            margin-top: 50px; 
+        }
+
+        #pfp {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff6f61;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-right: 20px; 
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #ff6f61;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 30px;
+            color: #ff6f61;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: -10px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .social-icons a {
+            color: #ff6f61;
+            font-size: 30px;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #fff;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 900px;
+            text-align: justify;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 span {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        h2 b {
+            color: #ff6f61;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 15px;
+                flex-direction: column; 
+                text-align: center;
+            }
+
+            #pfp {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 24px;
+              
+    
+            }
+
+            .social-icons a {
+                font-size: 25px;
+                margin-right: 12px;
+            }
+
+            h2 {
+                font-size: 16px;
+                width: 90%;
+                
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                padding: 8px 0;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 3px;
+            }
+
+            header {
+                margin-top: 100px;
+            }
+
+            #pfp {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .social-icons a {
+                font-size: 20px;
+                margin-right: 8px;
+            }
+
+            h2 {
+                font-size: 14px;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="experiencia.html">Experiência</a>
+    <a href="curriculo.html">Currículo</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+</nav>
+
+<header>
+    <img id="pfp" src="IMAGENS/MINHA FOTO.jpeg" alt="Foto do Perfil">
+    <div class="info">
+        <h1>ARTHUR PEREIRA MACHADO</h1>
+        <h3>16 anos</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/arthur.machaado" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/arthurmachadooo" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arthurpereiramachado" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+</header>
+
+<h2>Olá, meu nome é <b>Arthur Pereira Machado</b> e sou um estudante apaixonado por <span>programação</span> no Instituto SENAC São Leopoldo. Desde que iniciei minha trajetória na área de tecnologia, descobri uma verdadeira paixão pela <span>programação</span>. Cada linha de código que escrevo não é apenas uma solução técnica, mas uma expressão da minha criatividade e vontade de resolver problemas complexos. A <span>programação</span> se tornou minha vocação, e a cada dia me sinto mais fascinado pelas possibilidades que ela oferece para transformar o mundo ao nosso redor.
+
+Sou uma pessoa muito <b>competitiva</b>, e esse espírito de competição está presente em tudo o que faço. Seja no desenvolvimento de projetos de <span>programação</span> ou em qualquer outra área da minha vida, sempre busco me destacar e ser o melhor. Tenho uma verdadeira obsessão em superar meus próprios limites, em aprender o máximo possível e em buscar a excelência em todas as tarefas que me proponho a realizar. Para mim, o processo de <span>melhoria contínua</span> é o que me motiva a seguir em frente, sempre em busca de algo mais.
+
+No entanto, minha <b>competitividade</b> não impede que eu saiba trabalhar em equipe. Ao contrário, acredito que a verdadeira força de um time está na colaboração e no respeito mútuo entre seus membros. Sei que cada pessoa tem um talento único a oferecer, e, por isso, me esforço para aprender com os outros e dividir meus conhecimentos. Para mim, o sucesso de uma equipe não é apenas sobre o desempenho individual, mas sobre a união e o esforço conjunto.
+
+Além disso, minha paixão por <span>esportes</span> — especialmente o <b>vôlei</b> — desempenha um papel fundamental na minha vida. Através do esporte, desenvolvi ainda mais essa gana de competir e vencer. O vôlei não é apenas uma atividade física para mim, mas um reflexo da minha mentalidade: a busca incessante pela <b>superação</b> e pelo sucesso. Mas, como no esporte, também sei que nem sempre a vitória é garantida. O mais importante, no final, é como lidamos com os fracassos. Acredito que a verdadeira força está em saber moderar as frustrações, aprender com os erros e sempre se reerguer. Sim, eu tento lidar com as frustrações... ou ao menos faço o meu melhor para tentar! (risos)
+
+Sou alguém que está sempre em movimento, sempre em busca de novos desafios e novas formas de aprender. Se a <span>programação</span> me ensinou algo, foi a importância de resolver problemas e inovar constantemente. Estou sempre atrás de novas ideias, projetos e soluções criativas, e busco expandir meus conhecimentos em linguagens, frameworks e ferramentas. Isso tudo porque sei que cada passo dado é uma oportunidade de crescimento.
+
+Em resumo, sou um apaixonado por <span>tecnologia</span>, <b>competitivo</b>, com uma mente voltada para a <b>superação</b> e dedicado a aprender e evoluir a cada dia. Se você procura alguém que não tem medo de desafios, que está sempre buscando ser o melhor no que faz, mas também sabe trabalhar em equipe e aprender com cada situação, então é um prazer te conhecer.
+
+Estou em busca de uma oportunidade onde possa aplicar minhas habilidades, crescer como profissional e contribuir com meu conhecimento para a construção de soluções inovadoras. Se você valoriza a busca constante por excelência e o trabalho em equipe, acredito que posso agregar muito ao seu time. Vamos conversar e explorar como posso contribuir para o sucesso da sua empresa!</h2>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+
+        #contato {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border: 3px solid #ff6f61;
+            margin-top: 80px;
+        }
+
+        #contato h2 {
+            font-size: 30px;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        #contato label {
+            font-size: 18px;
+            color: #ff6f61;
+            margin-bottom: 5px;
+        }
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        #contato input, #contato textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background-color: #222;
+            color: white;
+            margin-bottom: 20px;
+            transition: border 0.3s ease-in-out;
+        }
+
+        #contato input:focus, #contato textarea:focus {
+            border-color: #ff6f61;
+        }
+
+        #contato button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #contato button:hover {
+            background-color: #e55b56;
+        }
+
+     
+        @media (max-width: 480px) {
+    #contato {
+        width: 90%;
+        max-width: 600px;
+        margin: 30px auto; 
+        margin-top: 120px;
+        padding: 25px;
+        background-color: #222;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        border: 3px solid #ff6f61;
+        position: relative;
+        overflow: hidden;
+        padding-top: 50px; 
+        margin-bottom: 25px; 
+    }
+
+    #contato h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    #contato label {
+        font-size: 16px;
+    }
+
+    #contato input, #contato textarea {
+        font-size: 14px;
+    }
+
+    #contato button {
+        font-size: 14px;
+    }
+
+
+            nav {
+                flex-direction: column;
+                padding: 8px 0;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 3px;
+            }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Sobre Mim</a>
+        <a href="experiencia.html">Experiência</a>
+        <a href="curriculo.html">Currículo</a>
+        <a href="projetos.html">Projetos</a>
+    </nav>
+
+    <div id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="loading-spinner" id="loading-spinner"></div>
+    </div>
+
+    <script>
+        emailjs.init('ASmTAFMYxIMptZl4u');  
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Exibir o spinner de carregamento
+            document.getElementById('loading-spinner').style.display = 'block';
+            document.querySelector('button[type="submit"]').disabled = true;
+
+            emailjs.sendForm('arthurmachado', 'arthurmachado', this)  
+                .then(function(response) {
+                    console.log("Mensagem enviada com sucesso:", response);  
+                    alert("Mensagem enviada com sucesso!");
+                }, function(error) {
+                    console.error("Erro ao enviar a mensagem:", error);  
+                    alert("Erro ao enviar mensagem. Tente novamente.");
+                })
+                .finally(function() {
+                    // Esconder o spinner e reabilitar o botão após envio
+                    document.getElementById('loading-spinner').style.display = 'none';
+                    document.querySelector('button[type="submit"]').disabled = false;
+                    document.getElementById('contact-form').reset();
+                });
+        });
+    </script>
+
+</body>
+</html>
