@@ -20,7 +20,7 @@
             padding: 40px;
             width: 90%;
             max-width: 1000px;
-            margin: 80px auto 40px; /* Adiciona margem superior para evitar sobreposição com a barra de navegação */
+            margin: 80px auto 40px; 
             border-radius: 10px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
             border: 3px solid #ff6f61;
@@ -110,19 +110,28 @@
 
         @media (max-width: 480px) {
             nav {
-                flex-direction: column;
-                padding: 8px 0;
-            }
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 15px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-            nav a {
-                font-size: 14px;
-                padding: 3px;
-            }
+    nav a {
+        font-size: 12px;
+        padding: 3px;
+        margin: 0;
+    }
+
 
             #projetos {
-                padding: 30px;
-                width: 95%;
-                margin-top: 120px; 
+                padding: 20px;
+                width: 85%;
+                margin-top: 20px; 
             }
 
             #projetos h2 {
@@ -189,6 +198,24 @@
                 </a>
             </div>
         </div>
+        <div class="projeto-item">
+            <h3>Projeto 4 - Machado'street</h3>
+            <p>O Projeto Machado's Street nasceu como uma ideia criativa para transformar a paixão por moda urbana em algo único e significativo. Inspirado pela conexão com a cultura streetwear e pela essência das ruas, criamos uma marca que vai além de roupas. Cada peça, especialmente a calça baggy, carrega um propósito: expressar liberdade, atitude e autenticidade. Este projeto não é apenas sobre moda, mas sobre construir uma identidade e inspirar outras pessoas a abraçarem sua originalidade.</p>
+            
+            <div class="imagem-container">
+                <a href="https://arthurmachadooo.github.io/Machado-s-Street/" >
+                    <img src="IMAGENS/projeto 3.png" alt="Imagem do Projeto 3 - Parte 1">
+                </a>
+                <a href="https://arthurmachadooo.github.io/Machado-s-Street/estoque.html" >
+                    <img src="IMAGENS/projeto 33.png" alt="Imagem do Projeto 3 - Parte 2">
+                </a>
+                <a href="hhttps://arthurmachadooo.github.io/Machado-s-Street/sobre.html">
+                    <img src="IMAGENS/projeto 333.png" alt="Imagem do Projeto 3 - Parte 3">
+                </a>
+                <a href="https://arthurmachadooo.github.io/Machado-s-Street/carrinho.html" >
+                    <img src="IMAGENS/projeto 3333.png" alt="Imagem do Projeto 3 - Parte 4">
+                </a>
+            </div>
     </div>
 </body>
 </html>
