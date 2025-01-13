@@ -99,51 +99,62 @@
         #contato button:hover {
             background-color: #e55b56;
         }
-
         @media (max-width: 480px) {
-            #contato {
-                width: 90%;
-                max-width: 600px;
-                margin: 30px auto; 
-                margin-top: 120px;
-                padding: 25px;
-                background-color: #222;
-                border-radius: 10px;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-                border: 3px solid #ff6f61;
-                position: relative;
-                overflow: hidden;
-                padding-top: 50px; 
-                margin-bottom: 25px; 
-            }
+    #contato {
+        width: 80%;
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 25px;
+        background-color: #222;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        border: 3px solid #ff6f61;
+        position: relative;
+        overflow: hidden;
+        padding-top: 50px;
+        margin-top: 20px; 
+    }
 
-            #contato h2 {
-                font-size: 24px;
-                margin-top: 0;
-            }
+    #contato h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
 
-            #contato label {
-                font-size: 16px;
-            }
+    #contato label {
+        font-size: 16px;
+    }
 
-            #contato input, #contato textarea {
-                font-size: 14px;
-            }
+    #contato input, #contato textarea {
+        font-size: 14px;
+        width: 90%;
+        padding: 12px;
+    }
 
-            #contato button {
-                font-size: 14px;
-            }
+    #contato button {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
 
-            nav {
-                flex-direction: column;
-                padding: 8px 0;
-            }
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 15px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-            nav a {
-                font-size: 14px;
-                padding: 3px;
-            }
-        }
+    nav a {
+        font-size: 12px;
+        padding: 3px;
+        margin: 0;
+    }
+}
+
     </style>
 </head>
 <body>
