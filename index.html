@@ -46,7 +46,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row; /* Coloca o conteúdo da header na horizontal */
+            flex-direction: row;  
             height: 350px;
             width: 100%;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -166,43 +166,54 @@
         }
 
         @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-                padding: 8px 0;
-            }
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 15px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-            nav a {
-                font-size: 14px;
-                padding: 3px;
-            }
+    nav a {
+        font-size: 12px;
+        padding: 3px;
+        margin: 0;
+    }
 
-            header {
-                margin-top: 100px;
-            }
+    header {
+        margin-top: 0;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
 
-            #pfp {
-                width: 120px;
-                height: 120px;
-            }
+    #pfp {
+        width: 120px;
+        height: 120px;
+    }
 
-            h1 {
-                font-size: 28px;
-            }
+    h1 {
+        font-size: 28px;
+    }
 
-            h3 {
-                font-size: 20px;
-            }
+    h3 {
+        font-size: 20px;
+    }
 
-            .social-icons a {
-                font-size: 20px;
-                margin-right: 8px;
-            }
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 8px;
+    }
 
-            h2 {
-                font-size: 14px;
-                width: 95%;
-            }
-        }
+    h2 {
+        font-size: 14px;
+        width: 95%;
+    }
+}
+
     </style>
 </head>
 <body>
